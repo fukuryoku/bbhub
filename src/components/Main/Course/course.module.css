@@ -1,0 +1,29 @@
+.CourseText{
+ background: -webkit-linear-gradient(#015FA9, #46bdf4);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: 700;
+font-size: 1.3rem;
+}
+
+h2.CourseText {
+    font-size: 1.5rem;
+
+}
+.CourseBtn{
+    transform: translatey(50%);
+    background: linear-gradient(90deg, rgba(1,95,169,1) 22%, rgba(5,203,252,1) 54%, rgba(240,123,42,1) 91%);  outline:none;
+    transition: background-image 3s;
+    animation: 1s slidefadeXRight 2.5s forwards;
+    -webkit-transform: translatey(50%);
+    -moz-transform: translatey(50%);
+    -ms-transform: translatey(50%);
+    -o-transform: translatey(50%);
+    -webkit-animation: 1s slidefadeXRight 2.5s forwards;
+  }
+  .CourseBtn:hover{
+    outline:none;
+    background-image: -webkit-linear-gradient(right, #2b56f5 0%, #46bdf4 100%);
+    background-image: linear-gradient(to left, #2b56f5 0%, #46bdf4 100%);
+  }
+  
