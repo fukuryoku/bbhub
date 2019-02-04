@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+button{
+  color: white
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -53,30 +55,17 @@ nav {
  /* padding:     7rem 9rem; */
 
  color: white;
- -webkit-border-radius:0;
- -moz-border-radius:0;
- -ms-border-radius:0;
- -o-border-radius:0;
 }
 
 .jumbotron h1{
   opacity:0;
   transform: translatey(-40%);
   animation: 1s slidefadeYDown 0.5s forwards;
-  -webkit-transform: translatey(-40%);
-  -moz-transform: translatey(-40%);
-  -ms-transform: translatey(-40%);
-  -o-transform: translatey(-40%);
-  -webkit-animation: 1s slidefadeYDown 0.5s forwards;
 }
 @keyframes slidefadeYDown {
     100% {
       opacity: 1;
       transform: translatey(0%);
-      -webkit-transform: translatey(0%);
-      -moz-transform: translatey(0%);
-      -ms-transform: translatey(0%);
-      -o-transform: translatey(0%);
 }
 }
 
@@ -84,37 +73,28 @@ nav {
   opacity:0;
   transform: translatex(-40%);
   animation: 1s slidefadeXRight 1.5s forwards;
-  -webkit-transform: translatex(-40%);
-  -moz-transform: translatex(-40%);
-  -ms-transform: translatex(-40%);
-  -o-transform: translatex(-40%);
-  -webkit-animation: 1s slidefadeXRight 1.5s forwards;
 }
 
 @keyframes slidefadeXRight {
     100% {
     opacity: 1;
     transform: translatex(0%);
-    -webkit-transform: translatex(0%);
-    -moz-transform: translatex(0%);
-    -ms-transform: translatex(0%);
-    -o-transform: translatex(0%);
 }
 }
 
 .jumbotron>a.btn{
   opacity:0;
   transform: translatey(50%);
+  animation: 1s slidefadeXRight 2.5s forwards;
+
+
+}
+a.btn{
+  color: white;
   background: linear-gradient(90deg, rgba(1,95,169,1) 22%, rgba(5,203,252,1) 54%, rgba(240,123,42,1) 91%);  outline:none;
   transition: background-image 3s;
-  animation: 1s slidefadeXRight 2.5s forwards;
-  -webkit-transform: translatey(50%);
-  -moz-transform: translatey(50%);
-  -ms-transform: translatey(50%);
-  -o-transform: translatey(50%);
-  -webkit-animation: 1s slidefadeXRight 2.5s forwards;
 }
-.jumbotron>a.btn:hover{
+a.btn:hover{
   outline:none;
   background-image: -webkit-linear-gradient(right, #2b56f5 0%, #46bdf4 100%);
   background-image: linear-gradient(to left, #2b56f5 0%, #46bdf4 100%);
@@ -134,33 +114,18 @@ nav {
 
 
 .jumbo1{
-background-image: url("components/Main/Landing/landing1-highres.jpg");
+background-image: url("components/Landing/landing1HD.jpg");
+
 
 }
 .jumbo2{
-  background-image: url("components/Main/Landing/landing2.jpg");
+  background-image: url("components/Landing/landing2HD.jpg");
   
 }
 .jumbo3{
-  background-image: url("components/Main/Landing/landing3.jpg");
+  background-image: url("components/Landing/landing3HD.jpg");
     
 }
-    @media only screen and (max-width: 600px) {
-      .jumbo1{
-        background-image: url("components/Main/Landing/landing1.jpg");
-        
-        }
-        .jumbo2{
-          background-image: url("components/Main/Landing/landing2.jpg");
-          
-          }
-        
-          .jumbo3{
-            background-image: url("components/Main/Landing/landing3.jpg");
-            
-            }
-        
-    } 
 
 /* ----------------------CARD DECK----------------------------------------------- */
 
@@ -172,16 +137,21 @@ background-image: url("components/Main/Landing/landing1-highres.jpg");
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* ---------------------------------LANGS PIE MENU----------------------------------- */
+/* ---------------------------------SERVICE PIE MENU----------------------------------- */
+.card{
+  background: -webkit-linear-gradient(#015FA9, #46bdf4);
+  color: white;
+}
 
 /* --------------------------------------FB------------------------------------ */
 .FB{
-  background-image: url("components/Main/Landing/fb1.jpg");
+  background-image: url("components/Landing/fb1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+
 
 .FB h1, .FB p{
   background: -webkit-linear-gradient(#015FA9, #46bdf4);
@@ -249,6 +219,7 @@ animation: bounce 2s infinite;
 }
 #footerContainer a:hover{
   text-decoration: none;
+  cursor: pointer;
   color: #F07B2A
 }
 
@@ -256,3 +227,29 @@ animation: bounce 2s infinite;
 .badge{
   cursor: pointer;
 }
+
+
+
+
+/* images for mobile */
+
+@media only screen and (max-width: 600px) {
+  .jumbo1{
+     background-image: url("components/Landing/landing1SD.jpg");
+      
+      }
+  .jumbo2{
+        background-image: url("components/Landing/landing2SD.jpg");
+        
+        }
+      
+  .jumbo3{
+          background-image: url("components/Landing/landing3SD.jpg");
+          
+          }
+    .FB   {
+      background-image: url("components/Landing/fb1SD.jpg");
+    }
+
+      
+  } 

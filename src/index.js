@@ -8,6 +8,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { setAuthorizationToken, setCurrentUser } from './store/actions/auth';
 import jwtDecode from 'jwt-decode'
+import ScrollToTop from './hoc/scrollTop'
 
 const store = configureStore();
 
@@ -23,9 +24,11 @@ if (localStorage.jwtToken) {
   
 const app=(
     <Provider store={store}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+          <BrowserRouter>
+            <ScrollToTop>
+              <App/>
+            </ScrollToTop>
+          </BrowserRouter>
     </Provider>
     );
 

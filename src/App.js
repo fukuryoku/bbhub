@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Main from './components/Main/Main';
+import Main from './containers/Main/Main';
 import {connect} from "react-redux"
 import {fetchProducts} from "./store/actions/products"
 import {fetchEcourses} from "./store/actions/ecourses"
@@ -20,12 +20,9 @@ componentDidMount(){
 
   render() {
     return (
-
-    <React.Fragment>
         <Main className="main-wraper">
           {this.props.children}
         </Main>
-    </React.Fragment>
     );
   }
 }
