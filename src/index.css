@@ -19,9 +19,14 @@ a:hover{
 }
 
 .main-wraper{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; 
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; 
   margin: 0;
   padding: 0;
 }
@@ -35,6 +40,9 @@ nav {
 
 
 .navbar.scrolling {
+  background-image: -webkit-gradient(linear, right top, left top, from(#46bdf4), to(#2b56f5));
+  background-image: -webkit-linear-gradient(right, #46bdf4 0%, #2b56f5 100%);
+  background-image: -o-linear-gradient(right, #46bdf4 0%, #2b56f5 100%);
   background-image: linear-gradient(to left, #46bdf4 0%, #2b56f5 100%);
   -webkit-transition: background 731ms ease-in;
   -o-transition: background 731ms ease-in;
@@ -59,46 +67,90 @@ nav {
 
 .jumbotron h1{
   opacity:0;
-  transform: translatey(-40%);
-  animation: 1s slidefadeYDown 0.5s forwards;
+  -webkit-transform: translatey(-40%);
+      -ms-transform: translatey(-40%);
+          transform: translatey(-40%);
+  -webkit-animation: 1s slidefadeYDown 0.5s forwards;
+          animation: 1s slidefadeYDown 0.5s forwards;
+}
+@-webkit-keyframes slidefadeYDown {
+    100% {
+      opacity: 1;
+      -webkit-transform: translatey(0%);
+              transform: translatey(0%);
+}
 }
 @keyframes slidefadeYDown {
     100% {
       opacity: 1;
-      transform: translatey(0%);
+      -webkit-transform: translatey(0%);
+              transform: translatey(0%);
 }
 }
 
 .jumbotron p{
   opacity:0;
-  transform: translatex(-40%);
-  animation: 1s slidefadeXRight 1.5s forwards;
+  -webkit-transform: translatex(-40%);
+      -ms-transform: translatex(-40%);
+          transform: translatex(-40%);
+  -webkit-animation: 1s slidefadeXRight 1.5s forwards;
+          animation: 1s slidefadeXRight 1.5s forwards;
+}
+
+@-webkit-keyframes slidefadeXRight {
+    100% {
+    opacity: 1;
+    -webkit-transform: translatex(0%);
+            transform: translatex(0%);
+}
 }
 
 @keyframes slidefadeXRight {
     100% {
     opacity: 1;
-    transform: translatex(0%);
+    -webkit-transform: translatex(0%);
+            transform: translatex(0%);
 }
 }
 
 .jumbotron>a.btn{
   opacity:0;
-  transform: translatey(50%);
-  animation: 1s slidefadeXRight 2.5s forwards;
+  -webkit-transform: translatey(50%);
+      -ms-transform: translatey(50%);
+          transform: translatey(50%);
+  -webkit-animation: 1s slidefadeXRight 2.5s forwards;
+          animation: 1s slidefadeXRight 2.5s forwards;
 
 
 }
 a.btn{
   color: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(22%, rgba(1,95,169,1)), color-stop(54%, rgba(5,203,252,1)), color-stop(91%, rgba(240,123,42,1)));
+  background: -webkit-linear-gradient(left, rgba(1,95,169,1) 22%, rgba(5,203,252,1) 54%, rgba(240,123,42,1) 91%);
+  background: -o-linear-gradient(left, rgba(1,95,169,1) 22%, rgba(5,203,252,1) 54%, rgba(240,123,42,1) 91%);
   background: linear-gradient(90deg, rgba(1,95,169,1) 22%, rgba(5,203,252,1) 54%, rgba(240,123,42,1) 91%);  outline:none;
+  -webkit-transition: background-image 3s;
+  -o-transition: background-image 3s;
   transition: background-image 3s;
 }
 a.btn:hover{
   outline:none;
   background-image: -webkit-linear-gradient(right, #2b56f5 0%, #46bdf4 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#2b56f5), to(#46bdf4));
+  background-image: -o-linear-gradient(right, #2b56f5 0%, #46bdf4 100%);
   background-image: linear-gradient(to left, #2b56f5 0%, #46bdf4 100%);
 
+}
+
+@-webkit-keyframes slidefadeYUP {
+    100% {
+    opacity: 1;
+    transform: translatey(0%);
+    -webkit-transform: translatey(0%);
+    -moz-transform: translatey(0%);
+    -ms-transform: translatey(0%);
+    -o-transform: translatey(0%);
+}
 }
 
 @keyframes slidefadeYUP {
@@ -144,6 +196,17 @@ background-image: url("components/Landing/landing1HD.jpg");
 }
 
 /* --------------------------------------FB------------------------------------ */
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .FB {
+ min-height: 300px;
+ background-attachment: initial;
+ background-size: cover;
+ }
+}
+
+
+
 .FB{
   background-image: url("components/Landing/fb1.jpg");
   background-position: center;
@@ -159,14 +222,23 @@ background-image: url("components/Landing/landing1HD.jpg");
   -webkit-text-fill-color: transparent;
   font-weight: 400;
   opacity: 0;
-  animation: 2s MyFadeIn 0.5s forwards;
+  -webkit-animation: 2s MyFadeIn 0.5s forwards;
+          animation: 2s MyFadeIn 0.5s forwards;
 }
+ @-webkit-keyframes MyFadeIn{
+  100%{
+    opacity: 1;
+  }
+ }
  @keyframes MyFadeIn{
   100%{
     opacity: 1;
   }
  }
  button{
+  background: -webkit-gradient(linear, left top, right top, color-stop(22%, rgba(1,95,169,1)), color-stop(54%, rgba(5,203,252,1)), color-stop(91%, rgba(240,123,42,1)));
+  background: -webkit-linear-gradient(left, rgba(1,95,169,1) 22%, rgba(5,203,252,1) 54%, rgba(240,123,42,1) 91%);
+  background: -o-linear-gradient(left, rgba(1,95,169,1) 22%, rgba(5,203,252,1) 54%, rgba(240,123,42,1) 91%);
   background: linear-gradient(90deg, rgba(1,95,169,1) 22%, rgba(5,203,252,1) 54%, rgba(240,123,42,1) 91%);  outline:none;
 
  }
@@ -197,18 +269,28 @@ background-image: url("components/Landing/landing1HD.jpg");
   font-weight: 900;
 }
 .Bouncing{
-animation: bounce 2s infinite;
+-webkit-animation: bounce 2s infinite;
+        animation: bounce 2s infinite;
 
 }
 
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);transform: translateY(0);}
+  40% {-webkit-transform: translateY(-30px);transform: translateY(-30px);}
+  60% {-webkit-transform: translateY(-20px);transform: translateY(-20px);}
+}
+
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-30px);}
-  60% {transform: translateY(-20px);}
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);transform: translateY(0);}
+  40% {-webkit-transform: translateY(-30px);transform: translateY(-30px);}
+  60% {-webkit-transform: translateY(-20px);transform: translateY(-20px);}
 } 
 /* -------------------FOOTER------------------------------------------------------ */
 #footerContainer {
   color: whitesmoke;
+  background-image: -webkit-gradient(linear, right top, left top, from(#46bdf4), to(#2b56f5));
+  background-image: -webkit-linear-gradient(right, #46bdf4 0%, #2b56f5 100%);
+  background-image: -o-linear-gradient(right, #46bdf4 0%, #2b56f5 100%);
   background-image: linear-gradient(to left, #46bdf4 0%, #2b56f5 100%);
   margin: auto auto 0 auto;
   
