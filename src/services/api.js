@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 export function setTokenHeader(token) {
     if (token) {
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
@@ -11,8 +10,9 @@ export function setTokenHeader(token) {
   
 
 export function apiCall(method, path, data){
+    let herokuPath=`https://bb-hub-server.herokuapp.com${path}` // prefix of heroku api app
     return new Promise((resolve, reject)=>{
-        return axios[method.toLowerCase()](path, data)
+        return axios[method.toLowerCase()](herokuPath, data)
         .then(res=>{
            return resolve(res.data)
         })

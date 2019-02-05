@@ -1,4 +1,6 @@
 #--react---
+seo
+how to pint to api&&&??/
 clear imports
 images optimisation
 refactor folder structure

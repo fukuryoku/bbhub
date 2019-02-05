@@ -26,7 +26,7 @@ const footer = (props)=>{
 
             </div>
 
-            <div className="row justify-content-around flex-column flex-sm-row ">
+            <div className="row justify-content-between flex-column flex-sm-row law">
                     <a href="" className="myA text-center">© 2019 All Rights Reserved HUB LTD Terms of Use and Privacy Policy.</a>
                     <a href="" className="myA text-center">Designed by FUKUROKU.APPS</a>
             </div>

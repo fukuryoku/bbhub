@@ -327,6 +327,10 @@ background-image: url("components/Landing/landing1HD.jpg");
   cursor: pointer;
   color: #F07B2A
 }
+.law{
+  font-size: 0.75rem;
+  margin: 20px 20px 0px 20px;
+}
 
 /* ============ONLINE LESSON */
 .badge{
