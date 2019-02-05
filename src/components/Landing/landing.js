@@ -21,7 +21,7 @@ const landing = (props)=>{
             <div className="carousel-inner">
             <div className="carousel-item active " data-interval="1000000">
                 <div className="jumbotron jumbo1 text-center">
-                    <h1 className="display-3 text-center my-5"  >{`Привет ${props.currentUser.user.username ||`друг`}`}</h1>
+                    <h1 className="display-4 text-center my-5"  >{`Привет ${props.currentUser.user.username ||`друг`}`}</h1>
                     <p className="lead font-weight-normal my-5">
                     Мы заинтересованы в успехе каждого студента и для этого мы рады 
                     предоставить Вам доступ к
@@ -34,7 +34,7 @@ const landing = (props)=>{
 
             <div className="carousel-item  " data-interval="">
                 <div className="jumbotron jumbo2 text-center">
-                    <h1 className="display-3 text-center my-5">Учись онлайн бесплатно!</h1>
+                    <h1 className="display-4 text-center my-5">Учись онлайн бесплатно!</h1>
                     <p className="lead font-weight-normal my-5">Создавай и изучай бесплатные онлайн уроки</p>
                     <Link className="btn  btn-lg btn-primary" to="/ecourse" role="button">ПОЛЕТЕЛИ</Link>
                 </div>
@@ -42,7 +42,7 @@ const landing = (props)=>{
 
             <div className="carousel-item  " data-interval="">
                 <div className="jumbotron jumbo3 text-center">
-                    <h1 className="display-3 text-center my-5">С нами учиться легко!</h1>
+                    <h1 className="display-4 text-center my-5">С нами учиться легко!</h1>
                     <p className="lead font-weight-normal my-5">
                     новое свежее место для развития и досуга.
                      Создавая его для Вас, мы задались целью обеспечить максимально благоприятные 
@@ -68,7 +68,7 @@ const landing = (props)=>{
 {/* ---------------------------------------------DIVIDER---------------------------------------------------------- */}
     <div className="divider m-5">
         <h1>НАШИ УСЛУГИ</h1>
-        <h2>Рады приложить все усилия для Вашего успеха</h2>
+        <h2 className="d-none d-md-block">Рады приложить все усилия для Вашего успеха</h2>
         <svg height="3" width="200">
             <line x1="0" y1="0" x2="200" y2="0" style={{stroke:'#F07B2A', strokeWidth:'7'}}/>
         </svg>     
@@ -115,7 +115,7 @@ const landing = (props)=>{
                 <a href="/contact" className="btn btn-primary">Полетели!</a>
             </div>
         </div>
-s
+
         <div className="card m-3" style={{width: '20rem'}}>
             <img src={ require('./itSD.jpg') } className="card-img-top" alt="..."/>
             <div className="card-body">
@@ -139,8 +139,8 @@ s
 
  {/* ---------------------------------------------DIVIDER---------------------------------------------------------- */}
     <div className="divider m-5">
-        <h1>Начни развития уже сейчас!</h1>
-        <h2>У нас легко найти единомышлеников и учиться станет еще увлкательнее!</h2>
+        <h1>Начни развитие уже сейчас!</h1>
+        <h2 className="d-none d-md-block">У нас легко найти единомышлеников и учиться станет еще увлкательнее!</h2>
         <svg height="3" width="200">
             <line x1="0" y1="0" x2="200" y2="0" style={{stroke:'#F07B2A', strokeWidth:'7'}}/>
         </svg>     
@@ -150,19 +150,19 @@ s
         <div className="container-fluid FB">
             <div className="row ">
 
-            <div className="col m-4 text-center text-sm-left">
-                <h1 className="display-3 ">Открывай мир!</h1>
-                <p className="lead font-weight-bolder">
+            <div className="col-md-9 my-4 text-center text-sm-left">
+                <h1 className="display-4 ">Открывай мир!</h1>
+                <p className="lead font-weight-bolder text-wrap">
                 Наш центр – это уникальное место, 
                 где ты достигнешь мечты свободного общения. 
                 Знание иностранного языка открывает дверь в новый мир, полный удивительных возможностей. 
                 Мы пройдем с тобой этот путь, обеспечив лучшие условия твоего роста. Ты можешь – ВЕРЬ!
                 </p>
-                <a className="btn  btn-lg btn-primary" href="/contacts" role="button">Полетели</a>
+                <a className="btn  btn-lg btn-primary" href="/contact" role="button">Полетели</a>
             </div>
 
-            <div className="col my-3  text-center">
-            </div>
+            {/* <div className="col my-3  text-center">
+            </div> */}
                
             </div>
 

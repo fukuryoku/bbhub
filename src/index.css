@@ -9,6 +9,13 @@ body {
 button{
   color: white
 }
+button:hover{
+  outline:none;
+  background-image: -webkit-linear-gradient(right, #2b56f5 0%, #46bdf4 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#2b56f5), to(#46bdf4));
+  background-image: -o-linear-gradient(right, #2b56f5 0%, #46bdf4 100%);
+  background-image: linear-gradient(to left, #2b56f5 0%, #46bdf4 100%);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -184,12 +191,12 @@ background-image: url("components/Landing/landing1HD.jpg");
 
 
 
-.divider {
+.divider *{
   background: -webkit-linear-gradient(#015FA9, #46bdf4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* ---------------------------------SERVICE PIE MENU----------------------------------- */
+/* ---------------------------------SERVICES----------------------------------- */
 .card{
   background: -webkit-linear-gradient(#015FA9, #46bdf4);
   color: white;
@@ -201,6 +208,8 @@ background-image: url("components/Landing/landing1HD.jpg");
   .FB {
  min-height: 300px;
  background-attachment: initial;
+ background-position: center;
+ background-repeat: no-repeat;
  background-size: cover;
  }
 }
@@ -208,6 +217,7 @@ background-image: url("components/Landing/landing1HD.jpg");
 
 
 .FB{
+  min-height:45vh;
   background-image: url("components/Landing/fb1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -221,20 +231,8 @@ background-image: url("components/Landing/landing1HD.jpg");
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 400;
-  opacity: 0;
-  -webkit-animation: 2s MyFadeIn 0.5s forwards;
-          animation: 2s MyFadeIn 0.5s forwards;
 }
- @-webkit-keyframes MyFadeIn{
-  100%{
-    opacity: 1;
-  }
- }
- @keyframes MyFadeIn{
-  100%{
-    opacity: 1;
-  }
- }
+
  button{
   background: -webkit-gradient(linear, left top, right top, color-stop(22%, rgba(1,95,169,1)), color-stop(54%, rgba(5,203,252,1)), color-stop(91%, rgba(240,123,42,1)));
   background: -webkit-linear-gradient(left, rgba(1,95,169,1) 22%, rgba(5,203,252,1) 54%, rgba(240,123,42,1) 91%);
@@ -262,7 +260,7 @@ background-image: url("components/Landing/landing1HD.jpg");
   position:absolute;
 }
 
-.CallDiv {
+.CallDiv * {
   background: -webkit-linear-gradient(#015FA9, #46bdf4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -296,6 +294,21 @@ background-image: url("components/Landing/landing1HD.jpg");
   
 }
 
+/* =================CARD COLUMNS========================== */
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+  @include media-breakpoint-only(xs) {
+    column-count: 2;
+  }
+
+}
+
+/* ================================================FOTER================== */
 #footerContainer a{
   color: whitesmoke;
 }
@@ -309,8 +322,6 @@ background-image: url("components/Landing/landing1HD.jpg");
 .badge{
   cursor: pointer;
 }
-
-
 
 
 /* images for mobile */

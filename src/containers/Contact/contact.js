@@ -158,7 +158,7 @@ class contact extends Component {
                     </div>
                 </div>
     
-                <a className="btn" type="submit">Отправить</a>
+                <button className="btn  btn-lg btn-primary" type="submit">Отправить</button>
                 { this.state.success?(
                 <div className="alert alert-success">
                     Спасибо за обращение!

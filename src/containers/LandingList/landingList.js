@@ -33,7 +33,7 @@ class LandingList extends Component {
 
 
     return(     
-        <div className="card-columns ">
+        <div className="card-columns m-3 ">
             {productsList}
         </div>
 
