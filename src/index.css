@@ -205,7 +205,16 @@ background-image: url("components/Landing/landing1HD.jpg");
 
 /* --------------------------------------FB------------------------------------ */
 
-@supports (-webkit-overflow-scrolling: touch) {
+
+/* @supports (-webkit-overflow-scrolling: touch) {
+  .FB {
+ min-height: 300px;
+ background-attachment: initial;
+ -webkit-background-attachment: initial;
+
+ }
+} */
+@media only screen and (max-width: 600px) {
   .FB {
  min-height: 300px;
  background-attachment: initial;
