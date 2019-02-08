@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import {Link} from 'react-router-dom';
 
 class Auth extends Component {
     state = {
@@ -99,6 +100,7 @@ class Auth extends Component {
               >
                 {buttonText}
               </button>
+              <Link className="btn bth-primary" to="/forgot">Забыли пароль?</Link>
             </form>
           </div>
         </div>

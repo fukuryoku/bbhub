@@ -8,6 +8,7 @@ import Landing from '../../components/Landing/landing';
 import Contact from '../Contact/contact';
 import Auth from '../Auth/Auth';
 import Profile from '../../components/Profile/profile';
+import Reset from '../Reset/Reset'
 
 import Ecourse from '../../components/Ecourses/ecourse';
 import EcourseLanding from '../../components/Ecourses/eCourseLanding';
@@ -146,16 +147,28 @@ componentWillMount(){
                         )
                     }} 
                     />
-                
-                <Route exact path='/signup' render={props=> {
+
+                 <Route exact path='/forgot' render={props=> {
                         return(
-                        <Auth 
+                        <Reset 
+                        forgot
+                        errors={this.props.errors}
+                        removeError={removeError}
+                        buttonText="Восстановить пароль"
+                        heading="Форма восстановления"
+                        {...props}/>
+                        
+                        )
+                    }} 
+                    />
+                
+                <Route exact path='/reset/:token' render={props=> {
+                        return(
+                        <Reset 
                         removeError={removeError}
                         errors={this.props.errors}
-                        onAuth={this.props.authUser}
-                        signUp
-                        buttonText="РЕГИСТРАЦИЯ"
-                        heading="ПРИСОЕДИНЯЙТЕСЬ"
+                        buttonText="Изменить пароль"
+                        heading="Форма смены пароля"
                         {...props}/>
                         
                         )
