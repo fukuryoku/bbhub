@@ -45,7 +45,7 @@ class contact extends Component {
                                 height="450" 
                                 frameBorder="0" 
                                 style={{border:'0'}} 
-                                url={"https://www.google.com/maps/embed/v1/place?q=%D0%BE%D0%B4%D0%B5%D1%81%D1%81%D0%B0%20%D0%BF%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%204&key=AIzaSyAVgbztgd0YHAdBdPk0hrgSEoyx2HbDIK4"} 
+                                url={"https://www.google.com/maps/embed/v1/place?q=%D0%BE%D0%B4%D0%B5%D1%81%D1%81%D0%B0%20%D0%BF%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%204&key=somekey"} 
                                 allowFullScreen>
                             </Iframe>
                         </div>
